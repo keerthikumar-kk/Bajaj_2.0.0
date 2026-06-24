@@ -17,3 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://www.bowizzy.com')
+
+WebUI.waitForElementPresent(findTestObject('Page_bowizzy/input_Enter your email'), 5)
+
+WebUI.setText(findTestObject('Page_bowizzy/input_Enter your email'), 'charan@gmail.com')
+
+WebUI.waitForElementPresent(findTestObject('Page_bowizzy/input_Enter your password'), 10)
+
+WebUI.setEncryptedText(findTestObject('Page_bowizzy/input_Enter your password'), '7Xxt2l/8OdpT7cHQCpmceQ==')
+
+WebUI.delay(5)
+
+WebUI.closeBrowser()
+
